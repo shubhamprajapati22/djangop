@@ -1,0 +1,20 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "{% static 'Css/Login_page_Style.css' %}">
+    <title>login form</title>
+<script src = "scripts/validation.js" type = "{% static 'text/javascript' %}"></script>
+</head>
+<body>
+<div>
+    <h1 name = "h1">LOGIN HERE</h1>
+    <img class = "ball" src = "{% static 'images/football.png' %}"/>
+<form action="#" method="get" onsubmit="return validate()">
+<input id=sp type="text" placeholder = "username"/><br>
+<input id = sp2 type="password" placeholder = "password"/></br>
+<input id = "sp3" type = "submit" value = "login"/>
+</form>
+</div>
+</body>
+</html>

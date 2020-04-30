@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> home page</title>
+   <link rel="preload" as="image" href="{% static 'images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107-low.jpg' %}"/>
+    <link rel="preload" as="image" href="{% static 'images/shubham.JPG'%}"/>
+    <link rel = "preload" as = "image" href = "{% static 'images/football.png'%}"/>
+
+    <link rel = "stylesheet" href = "{% static 'Css/HomeStyle.css'%}"/>
+    <!--<script>src = "https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js" type = "text/javascript"</script>-->
+
+    </head>
+    <header></header>
+<body>
+
+    <div id = "head">
+         <div id = "logo">
+       <img src = "{% static 'images/football.png'%}" height = 60px width = 60px/>
+        </div>
+    <ul id = "headElement">
+        <li><a href = "add/">LOG-IN</a></li>
+        <li><a href = "#">CONTACT</a></li>
+        <li><a href = "#">ABOUT ME</a></li>
+        <li><a href = "index.html">HOME</a></li>
+        </ul>
+    </div>
+    <div class = "myimage">
+        <img src = "{% static 'images/shubham.JPG'%}" width = 100px height = 100px/>
+
+
+
+    </div>
+
+    </body>
+
+
+
+</html>

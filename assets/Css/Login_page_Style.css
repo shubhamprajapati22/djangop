@@ -1,0 +1,84 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-image: url("../images/background-business-computer-connection-303383.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position:center;
+    font-family: sans-serif;
+    }
+div{
+    box-shadow: 10px 10px 10px #00417d, -10px -10px 10px #774345;
+    width: 300px;
+    height: 450px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 20px;
+    }
+.ball{
+    width: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+form{
+    padding: 20%;
+}
+#sp{
+    position: absolute;
+    top:30%;
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid white;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+#sp2{
+    position: absolute;
+    top: 50%;
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid white;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+#sp3{
+    width: 60%;
+    height: 30px;
+    position: absolute;
+    top: 70%;
+    left: 22%;
+    border: none;
+    background: #fb2525;
+    color: #ffb;
+    font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+}
+#sp3:hover{
+    cursor: pointer;
+    background: yellow;
+    color: black;
+}
+h1{
+    font-style: italic;
+    color: red;
+    position: absolute;
+    top:10%;
+    left: 14%;
+    cursor: default;
+}
+
+
+
+
