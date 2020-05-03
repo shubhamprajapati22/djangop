@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 
 <!DOCTYPE HTML>
 <html>
@@ -32,6 +33,12 @@
     </div>
     <a class = "add" href = "add/"><h4>ADDITON</h4></a>
 
+    {% for imag in imgs1 %}
+    <img src = "{{baseUrl}}/{{imag.path_img}}" width = 200px height = 200px />
+    {% if imag.h %}
+    hello
+    {% endif %}
+    {% endfor %}
     </body>
 
 
