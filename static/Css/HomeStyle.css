@@ -1,6 +1,7 @@
 *{
     padding: 0px;
     margin: 0px;
+    font-family: cursive;
 }
 header{
 
@@ -28,7 +29,6 @@ header{
     padding: 2px 10px;
     margin-top: 10px;
     margin-right: 50px;
-    font-family: cursive;
     }
 #logo{
     width: 60px;
@@ -49,14 +49,20 @@ header{
      cursor: default;
 }
 .myimage{
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 250px;
     top: 40%;
     left: 50%;
     position: absolute;
     transform: translate(-40%, -50%);
-    border-radius: 50%;
 }
 .myimage img{
     border-radius: 50%;
+}
+.add{
+    text-decoration: none;
+    color: green;
+    position: absolute;
+    top: 75px;
+    left: 40px;
 }

@@ -19,8 +19,8 @@ from firstapp import views
 
 
 urlpatterns = [
-    path('web/', include('myweb.urls')),
-    path('', include('firstapp.urls')),
+    path('', include('myweb.urls')),
+    path('add/', include('firstapp.urls')),
     path('shubham/', views.sec, name = 'sec'),
     path('admin/', admin.site.urls),
 ]
