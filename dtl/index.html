@@ -34,10 +34,14 @@
     <a class = "add" href = "add/"><h4>ADDITON</h4></a>
 
     {% for imag in imgs1 %}
-    <img src = "{{baseUrl}}/{{imag.path_img}}" width = 200px height = 200px />
+    <img src = "{{baseUrl}}/{{imag.path_img}}" width = 200px height = 200px /><br>
     {% if imag.h %}
     hello
     {% endif %}
+    {{imag.name}}
+    <br>
+    {{imag.age}}
+    <br>
     {% endfor %}
     </body>
 
