@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from firstapp import views
+from django.conf import settings            #for adding the media files into static
+from django.conf.urls.static import static  #for adding the media files into static
 
 
 urlpatterns = [
@@ -24,3 +26,8 @@ urlpatterns = [
     path('shubham/', views.sec, name = 'sec'),
     path('admin/', admin.site.urls),
 ]
+
+#for adding the media files into static
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+
