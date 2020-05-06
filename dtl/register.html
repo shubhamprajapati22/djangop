@@ -1,0 +1,23 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+    <link rel = "stylesheet" href = "{% static 'Css/registration.css' %}">
+    <title>login form</title>
+<script src = "scripts/validation.js" type = "text/javascript"></script>
+</head>
+<body>
+<div>
+    <h1 name = "h1">REGISTER HERE</h1>
+    <img class = "ball" src = "{% static 'images/football.png' %}"/>
+<form action="#" method="get" onsubmit="return validate()">
+<input id=sp type="text" placeholder = "your name here"/><br>
+    <input id=email type="email" placeholder = "your email"/><br>
+<input id = sp2 type="password" placeholder = "new password"/></br>
+<input id = sp2a type="password" placeholder = "re-enter password"/></br>
+<input id = "sp3" type = "submit" value = "register"/>
+</form>
+</div>
+</body>
+</html>

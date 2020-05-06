@@ -12,11 +12,13 @@ header{
 
     background-size: cover;
     background-position: center;
+     background-repeat: repeat;
+    background-attachment: fixed;
 
 
 }
 #head{
-    position: absolute;
+    position: fixed;
     top: 1%;
     height: 62px;
     width: 100%;
