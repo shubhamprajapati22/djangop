@@ -20,8 +20,14 @@
        <img src = "{% static 'images/football.png'%}" height = 60px width = 60px/>
         </div>
     <ul id = "headElement">
-        <li><a href = "register/">SIGN-UP</a></li>
-        <li><a href = "login/">LOG-IN</a></li>
+        {% if user.is_authenticated %}
+
+        <li>Hello {{user.username}}</li>
+        <li><a href = "accounts/logout">LOG-OUT</a></li>
+        {% else %}
+        <li><a href = "accounts/register">SIGN-UP</a></li>
+        <li><a href = "accounts/login/">LOG-IN</a></li>
+        {% endif %}
         <li><a href = "#">CONTACT</a></li>
         <li><a href = "#">ABOUT ME</a></li>
         <li><a href = "index.html">HOME</a></li>

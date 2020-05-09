@@ -5,7 +5,6 @@ from .models import family_d
 def index(request):
     imgss = family_d.objects.all()      #for fetching the all database content
 
-    return render(request, 'index.html', {'imgs1' : imgss})
 
-def login(request):
-    return render(request, 'login.html')
+
+    return render(request, 'index.html', {'imgs1' : imgss})

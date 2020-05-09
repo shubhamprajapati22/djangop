@@ -25,7 +25,7 @@ urlpatterns = [
     path('add/', include('firstapp.urls')),
     path('shubham/', views.sec, name = 'sec'),
     path('admin/', admin.site.urls),
-    path('register/', include('register.urls')),
+    path('accounts/', include('register.urls')),
 ]
 
 #for adding the media files into static
