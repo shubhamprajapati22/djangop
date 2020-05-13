@@ -9,16 +9,25 @@
     <link rel = "preload" as = "image" href = "{% static 'images/football.png'%}"/>
 
     <link rel = "stylesheet" href = "{% static 'Css/HomeStyle.css'%}"/>
-    <!--<script>src = "https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js" type = "text/javascript"</script>-->
+   <script src="{% static 'scripts/p5.js'%}" type="text/javascript"></script>
+    <link rel = "stylesheet" href = "{% static 'Css/style.css'%}"/>
+
+    <script src="{% static 'scripts/p5.dom.js'%}" type="text/javascript"></script>
+    <script src="{% static 'scripts/p5.sound.js'%}" type="text/javascript"></script>
+
+    <script src="{% static 'scripts/sketch.js'%}" type="text/javascript"></script>
+
 
     </head>
     <header></header>
 <body>
 
     <div id = "head">
+<!--
          <div id = "logo">
        <img src = "{% static 'images/football.png'%}" height = 60px width = 60px/>
         </div>
+-->
     <ul id = "headElement">
         {% if user.is_authenticated %}
 

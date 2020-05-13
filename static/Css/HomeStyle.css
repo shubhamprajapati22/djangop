@@ -32,6 +32,7 @@ header{
     margin-top: 10px;
     margin-right: 50px;
     }
+/*
 #logo{
     width: 60px;
     height: 60px;
@@ -39,6 +40,7 @@ header{
     left: 2%;
     top: 1%;
 }
+*/
 #headElement li a{
     color: white;
     text-decoration: none;
