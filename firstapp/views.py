@@ -1,19 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
 
 # Create your views here.
 def add(request):
     val = {
         'log' : 'ADDITION'
     }
+    if request.method == 'POST':
+        x = request.POST['x']
+        y = request.POST['y']
+        res = int(x) + int(y)
+        messages.info(request, res)
+        return redirect('/add/')
+   
     return render(request, 'add.html', val)
 
 
 def sec(req):
     return HttpResponse('<em>that is second page</em>')
-
-def result(r):
-    x = r.POST['x']
-    y = r.POST['y']
-    res = int(x) + int(y)
-    return render(r, 'result.html', {'result': res})
+  

@@ -103,18 +103,30 @@ h1{
     left: 14%;
     cursor: default;
 }
+h4{
+    font-style: italic;
+    color: red;
+    position: absolute;
+    bottom:10%;
+    left: 130px;
+    cursor: default;
+    
+}
     </style>
 </head>
 <body>
 <div>
     <h1 name = "h1">{{log}}</h1>
     <img class = "ball" src = "{% static 'images/football.png' %}"/>
-<form action="result/" method="post" onsubmit="return validate()">
+<form action="" method="post" onsubmit="return validate()">
     {% csrf_token %}
 <input id=sp name = "x" type="text" placeholder = "First number"/><br>
 <input id = sp2 name = "y" type="text" placeholder = "second number"/></br>
 <input id = "sp3" type = "submit" value = "add"/>
 </form>
+{% for message in messages %}
+<h4>{{message}}</h4>
+    {% endfor %}
 </div>
 </body>
 </html>

@@ -34,7 +34,13 @@ def register(request):
         if flag:
             user = User.objects.create_user(first_name = name, password = repassword, email = email, username = name)
             user.save()
-            return redirect('/accounts/login/')
+            
+        
+            auth.login(request, user)
+            return redirect('/')
+        else:
+            messages.error(request, "invalid username or password")
+
 
     return render(request, "register.html")
 
