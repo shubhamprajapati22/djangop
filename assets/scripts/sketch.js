@@ -6,16 +6,26 @@ function preload(){
 
 function setup() {
   createCanvas(65, 65);
+  background(0,0,0);
     angleMode(DEGREES);
-    
+    s = second();
+    frameRate(60);
 }
 
-
+var i = 0, s = 0;
 function draw() {
     background(img);
     h = hour();
     m = minute();
-    s = second();
+    i++;
+
+    if(i == 60){
+        s = second();
+        i = 0;
+    }
+
+
+     s+=(1/60);
     fill(255);
     h = h % 12;
     if(h == 0)
@@ -27,8 +37,9 @@ function draw() {
    
       push();
     
-    rotate(map(h, 0, 12, 0, 360));
-    strokeWeight(2.5);
+
+    rotate(map(h, 0, 12, 0, 360) + m/2);
+    strokeWeight(3);
     stroke("black");
     line(0, 5, 0, -height * 6 / 30);//hour
     
@@ -36,8 +47,8 @@ function draw() {
     
     push();
     
-    rotate(map(m, 0, 60, 0, 360));
-    strokeWeight(1.5);
+    rotate(map(m, 0, 60, 0, 360) + s/10);
+    strokeWeight(2);
     stroke("green");
     line(0, 8, 0, -height * 17 / 60);//minute
     
@@ -47,8 +58,10 @@ function draw() {
     
       push();
     
+    //sc = s;
+
     rotate(map(s, 0, 60, 0, 360));
-    strokeWeight(0.8);
+    strokeWeight(2);
     stroke("red");
     line(0, 8, 0, -height/3.5);//second
     pop();
@@ -58,5 +71,5 @@ function draw() {
    
      noStroke();
     fill(204, 0, 102);
-    ellipse(0, 0, 5);
+    ellipse(0, 0, 8);
 }

@@ -10,7 +10,7 @@
 <div>
     <h1 name = "h1">LOGIN HERE</h1>
     <img class = "ball" src = "{% static 'images/football.png' %}"/>
-<form action="" method="post" onsubmit="return validate()">
+<form action="/accounts/login/" method="post" onsubmit="return validate()">
     {% csrf_token %}
 
 <input id=sp name = "username" type="text" placeholder = "username"/><br>

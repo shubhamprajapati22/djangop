@@ -20,3 +20,6 @@ def add(request):
 def sec(req):
     return HttpResponse('<em>that is second page</em>')
   
+
+def home(request):
+    return redirect('/')

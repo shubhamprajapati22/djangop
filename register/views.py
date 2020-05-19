@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-
+from myweb.models import userData
 
 # Create your views here.
 def register(request):
@@ -33,10 +33,12 @@ def register(request):
 
         if flag:
             user = User.objects.create_user(first_name = name, password = repassword, email = email, username = name)
+            #userD = userdata.objects.create(age = 0, user = user)
             user.save()
+            #userD.save()
             
         
-            auth.login(request, user)
+            #auth.login(request, user)
             return redirect('/')
         else:
             messages.error(request, "invalid username or password")
@@ -56,7 +58,9 @@ def login(request):
 
         if user is not None and user.is_superuser == False:
             auth.login(request, user)
-            return redirect('/')
+            #userdata = userData.objects.get(user_id = user.id)
+            #print(user)
+            return redirect('/')#render(request, 'index.html', {'userdata':userdata})
         else:
             messages.error(request, "invalid username or password")
 
@@ -67,8 +71,6 @@ def login(request):
 def logout(request):
     auth.logout(request);
     return redirect('/')
-
-
 
 
 
