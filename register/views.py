@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from myweb.models import userData
+from myweb.models import UserData
+
 
 # Create your views here.
 def register(request):
@@ -33,15 +34,14 @@ def register(request):
 
         if flag:
             user = User.objects.create_user(first_name = name, password = repassword, email = email, username = name)
-            #userD = userdata.objects.create(age = 0, user = user)
+            userdata = UserData.objects.create(age = 0, user = user)
             user.save()
-            #userD.save()
+            userdata.save()
             
         
             #auth.login(request, user)
             return redirect('/')
-        else:
-            messages.error(request, "invalid username or password")
+
 
 
     return render(request, "register.html")

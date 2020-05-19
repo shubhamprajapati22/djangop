@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from .models import userData
+from .models import UserData
 
 # Create your views here.
 def index(request):
-    #imgss = family_d.objects.all()      #for fetching the all database content
-    u = userData.objects.get(age = 30)
+    if request.method == 'POST':
+        pic = request.FILES['profile_pic']
+        profile = UserData.objects.get(user=request.user)
+        profile.profileImg = pic
+        profile.save();
 
-
-    return render(request, 'index.html',{'u':u})
+    return render(request, 'index.html')
