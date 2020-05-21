@@ -34,7 +34,7 @@ def register(request):
 
         if flag:
             user = User.objects.create_user(first_name = name, password = repassword, email = email, username = name)
-            userdata = UserData.objects.create(age = 0, user = user)
+            userdata = UserData.objects.create(user = user)
             user.save()
             userdata.save()
             
@@ -58,6 +58,7 @@ def login(request):
 
         if user is not None and user.is_superuser == False:
             auth.login(request, user)
+            request.session.set_expiry(0)
             #userdata = userData.objects.get(user_id = user.id)
             #print(user)
             return redirect('/')#render(request, 'index.html', {'userdata':userdata})

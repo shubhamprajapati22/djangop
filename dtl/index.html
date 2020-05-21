@@ -31,7 +31,7 @@
     <ul id = "headElement">
         {% if user.is_authenticated %}
 
-        <li>{{user.userdata.profileImg}}</li>
+        <li>age - {{user.userdata.profileImg}}</li>
         <li>Hello {{user.username}}</li>
         <li><a href = "accounts/logout">LOG-OUT</a></li>
         {% else %}
@@ -46,13 +46,15 @@
     <div class = "myimage">
         <img src = "{{user.userdata.profileImg.url}}" width = 240px height = 250px/>
 
-        {% if user.userdata.profileImg == 'Fpics/userpic.gif' %}
+
         <form action = '/' method = 'POST' enctype="multipart/form-data">
             {% csrf_token %}
             <input type = 'file' name = 'profile_pic' />
             <input type = 'submit' value = 'upload'/>
         </form>
-        {% endif %}
+        {% for message in messages %}
+        <p "color : red">{{message}}</p>
+        {% endfor %}
 
     </div>
     <a class = "add" href = "add/"><h4>ADDITON</h4></a>
